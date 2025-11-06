@@ -1,5 +1,6 @@
 from pydantic import BaseModel
-from typing import Optional
+from typing import Optional, List
+from app.core.types import ToolEvidence
 
 
 class ChatIn(BaseModel):
@@ -9,3 +10,4 @@ class ChatIn(BaseModel):
 
 class ChatOut(BaseModel):
     reply: str
+    evidence: List[ToolEvidence] = []
