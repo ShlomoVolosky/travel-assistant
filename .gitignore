@@ -1,0 +1,83 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+.eggs/
+build/
+dist/
+pip-wheel-metadata/
+*.manifest
+*.spec
+
+# --- Virtual Environments ---
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# --- Environment & Config Files ---
+.env
+.env.*
+!.env.example
+config/__pycache__/
+config/*.log
+
+# --- Logs & Reports ---
+*.log
+logs/
+*.out
+*.err
+*.pid
+*.csv
+*.jsonl
+*.sqlite3
+
+# --- IDE & Editor Files ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*.bak
+*.tmp
+.DS_Store
+Thumbs.db
+
+# --- Testing ---
+.coverage
+htmlcov/
+.tox/
+.nox/
+.pytest_cache/
+coverage.xml
+*.cover
+*.py,cover
+test-results/
+tests/__pycache__/
+
+# --- Docker ---
+docker-compose.override.yml
+*.tar
+*.img
+*.container
+
+# --- Jupyter / Notebooks ---
+.ipynb_checkpoints/
+*.ipynb
+
+# --- OS Files ---
+*.orig
+*.rej
+*.log.old
+ehthumbs.db
+Desktop.ini
+
+# --- Project specific ---
+travel-assistant.db
+.cache/
