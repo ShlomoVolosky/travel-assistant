@@ -20,7 +20,7 @@ ANSWER_STYLE = (
 
 
 def system_prompt() -> str:
-return f"{SYSTEM_BASE}{DELIMITER}{GUIDED_REASONING}{DELIMITER}{ANSWER_STYLE}"
+    return f"{SYSTEM_BASE}{DELIMITER}{GUIDED_REASONING}{DELIMITER}{ANSWER_STYLE}"
 
 
 USER_FOLLOWUP_HINT = (
@@ -29,5 +29,5 @@ USER_FOLLOWUP_HINT = (
 
 
 def user_frame(user_input: str, context_hint: str = "") -> str:
-hint = f"\n\n{USER_FOLLOWUP_HINT}" if context_hint else ""
-return f"{user_input}{hint}"
+    hint = f"\n\n{USER_FOLLOWUP_HINT}" if context_hint else ""
+    return f"{user_input}{hint}"

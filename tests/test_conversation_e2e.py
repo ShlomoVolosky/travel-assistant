@@ -10,13 +10,12 @@ from app.application.conversation import ConversationService
 
 @pytest.mark.asyncio
 async def test_chat_smoke():
-llm = OllamaLLM()
-weather = OpenMeteoWeather()
-knowledge = WikipediaKnowledge()
-search = DuckDuckGoSearch()
-memory = InMemoryStore()
-svc = ConversationService(llm, weather, knowledge, search, memory)
+    llm = OllamaLLM()
+    weather = OpenMeteoWeather()
+    knowledge = WikipediaKnowledge()
+    search = DuckDuckGoSearch()
+    memory = InMemoryStore()
+    svc = ConversationService(llm, weather, knowledge, search, memory)
 
-
-out = await svc.handle("thread-1", "Top attractions in Kyoto and expected weather tomorrow")
-assert isinstance(out.reply, str) and len(out.reply) > 0
+    out = await svc.handle("thread-1", "Top attractions in Kyoto and expected weather tomorrow")
+    assert isinstance(out.reply, str) and len(out.reply) > 0

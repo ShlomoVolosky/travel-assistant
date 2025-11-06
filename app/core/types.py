@@ -6,23 +6,23 @@ Role = Literal["system", "user", "assistant"]
 
 
 class ChatTurn(BaseModel):
-role: Role
-content: str
+    role: Role
+    content: str
 
 
 class Decision(BaseModel):
-intent: Literal["destination_reco", "packing", "local_attractions", "weather", "general"]
-use_weather: bool = False
-use_knowledge: bool = False
-use_search: bool = False
-query: str
+    intent: Literal["destination_reco", "packing", "local_attractions", "weather", "general"]
+    use_weather: bool = False
+    use_knowledge: bool = False
+    use_search: bool = False
+    query: str
 
 
 class ToolEvidence(BaseModel):
-tool: str
-payload: Dict[str, Any]
+    tool: str
+    payload: Dict[str, Any]
 
 
 class ChatResponseModel(BaseModel):
-reply: str
-evidence: List[ToolEvidence] = []
+    reply: str
+    evidence: List[ToolEvidence] = []

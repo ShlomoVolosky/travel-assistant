@@ -3,9 +3,9 @@ from typing import Optional
 
 
 class ChatIn(BaseModel):
-thread_id: str
-message: str
+    thread_id: str
+    message: str
 
 
 class ChatOut(BaseModel):
-reply: str
+    reply: str

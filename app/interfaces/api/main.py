@@ -23,11 +23,11 @@ svc = ConversationService(llm, weather, knowledge, search, memory)
 
 @app.post("/chat", response_model=ChatOut)
 async def chat(body: ChatIn):
-result = await svc.handle(thread_id=body.thread_id, user_input=body.message)
-return ChatOut(reply=result.reply)
+    result = await svc.handle(thread_id=body.thread_id, user_input=body.message)
+    return ChatOut(reply=result.reply)
 
 
 # Simple liveness
 @app.get("/health")
 async def health():
-return {"status": "ok"}
+    return {"status": "ok"}

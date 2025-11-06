@@ -9,22 +9,21 @@ from app.application.conversation import ConversationService
 
 
 async def main():
-llm = OllamaLLM()
-weather = OpenMeteoWeather()
-knowledge = WikipediaKnowledge()
-search = DuckDuckGoSearch()
-memory = InMemoryStore()
-svc = ConversationService(llm, weather, knowledge, search, memory)
+    llm = OllamaLLM()
+    weather = OpenMeteoWeather()
+    knowledge = WikipediaKnowledge()
+    search = DuckDuckGoSearch()
+    memory = InMemoryStore()
+    svc = ConversationService(llm, weather, knowledge, search, memory)
 
-
-thread_id = str(uuid.uuid4())
-print("Travel Assistant CLI. Type 'exit' to quit.\n")
-while True:
-q = input("you> ").strip()
-if q.lower() in {"exit", "quit"}: break
-resp = await svc.handle(thread_id, q)
-print("assistant>", resp.reply)
+    thread_id = str(uuid.uuid4())
+    print("Travel Assistant CLI. Type 'exit' to quit.\n")
+    while True:
+        q = input("you> ").strip()
+        if q.lower() in {"exit", "quit"}: break
+        resp = await svc.handle(thread_id, q)
+        print("assistant>", resp.reply)
 
 
 if __name__ == "__main__":
-asyncio.run(main())
+    asyncio.run(main())
