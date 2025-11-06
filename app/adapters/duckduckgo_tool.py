@@ -1,5 +1,5 @@
 from typing import List
-from langchain.tools import DuckDuckGoSearchRun
+from langchain_community.tools import DuckDuckGoSearchRun
 from app.ports.search_port import SearchPort
 
 

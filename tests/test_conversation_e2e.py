@@ -17,5 +17,7 @@ async def test_chat_smoke():
     memory = InMemoryStore()
     svc = ConversationService(llm, weather, knowledge, search, memory)
 
-    out = await svc.handle("thread-1", "Top attractions in Kyoto and expected weather tomorrow")
+    # Use a simpler query that triggers knowledge/weather but not search
+    # to avoid DuckDuckGo rate limiting in tests
+    out = await svc.handle("thread-1", "What are the must-see attractions in Kyoto?")
     assert isinstance(out.reply, str) and len(out.reply) > 0
