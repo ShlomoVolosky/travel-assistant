@@ -138,7 +138,7 @@ pytest -q
 3. Try example queries or type your own!
 
 **Example queries:**
-- "What are the must-see attractions in Kyoto?"
+- "What are the must-see attractions in Tokyo?"
 - "What should I pack for Tokyo in October?"
 - "What is the weather like in Paris?"
 - "Where should I go in Europe for summer vacation?"

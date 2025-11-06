@@ -19,5 +19,5 @@ async def test_chat_smoke():
 
     # Use a simpler query that triggers knowledge/weather but not search
     # to avoid DuckDuckGo rate limiting in tests
-    out = await svc.handle("thread-1", "What are the must-see attractions in Kyoto?")
+    out = await svc.handle("thread-1", "What are the must-see attractions in Tokyo?")
     assert isinstance(out.reply, str) and len(out.reply) > 0
